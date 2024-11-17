@@ -21,6 +21,41 @@ namespace MauiApp2.WeatherRestAPI
         public int id { get; set; }
         public string name { get; set; }
         public int cod { get; set; }
+
+        public string GetIconURI()
+        {
+            return weather[0].icon;
+        }
+
+        public string GetIemperature()
+        {
+            return main.temp.ToString() + "°F";
+        }
+
+        public string GetWeatherStatus()
+        {
+            return weather[0].description;
+        }
+
+        public string GetLocation()
+        {
+            return name + ", " + sys.country;
+        }
+
+        public string GetHumidity()
+        {
+            return main.humidity.ToString() + "%";
+        }
+
+        public string GetCloudCoverage()
+        {
+            return clouds.all + "%";
+        }
+
+        public string GetFeelsLike()
+        {
+            return main.feels_like.ToString() + "°F";
+        }
     }
 
     public class Coord
