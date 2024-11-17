@@ -6,7 +6,7 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace MauiApp2.WeatherRestAPI
+namespace WeatherDemo.WeatherRestAPI
 {
     internal class WeatherAPI
     {

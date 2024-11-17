@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MauiApp2.WeatherRestAPI
+namespace WeatherDemo.WeatherRestAPI
 {
     public class WeatherInfo
     {
