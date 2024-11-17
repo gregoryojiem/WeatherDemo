@@ -27,7 +27,7 @@ namespace WeatherDemo.WeatherRestAPI
             return weather[0].icon;
         }
 
-        public string GetIemperature()
+        public string GetTemperature()
         {
             return main.temp.ToString() + "°F";
         }
