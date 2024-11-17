@@ -27,8 +27,8 @@ namespace WeatherDemo.WeatherRestAPI
         public async Task<WeatherInfo> GetWeatherInfo(double latitude, double longitude)
         {
             WeatherInfo weatherInfo = new WeatherInfo();
-         
-            Uri uri = new Uri($"https://api.openweathermap.org/data/2.5/weather?lat={latitude}&lon={longitude}&units=imperial&appid=" + File.ReadAllText("api_key.txt"));
+
+            Uri uri = new Uri($"https://api.openweathermap.org/data/2.5/weather?lat={latitude}&lon={longitude}&units=imperial&appid=e7ef509f1d89f80e7f9a8e85703f6084");
             try
             {
                 HttpResponseMessage response = await _client.GetAsync(uri);
