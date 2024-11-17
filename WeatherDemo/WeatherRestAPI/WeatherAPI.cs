@@ -24,11 +24,11 @@ namespace MauiApp2.WeatherRestAPI
             };
         }
 
-        public async Task<WeatherInfo> GetWeatherInfo()
+        public async Task<WeatherInfo> GetWeatherInfo(double latitude, double longitude)
         {
             WeatherInfo weatherInfo = new WeatherInfo();
          
-            Uri uri = new Uri("https://api.openweathermap.org/data/2.5/weather?lat=40.7128&lon=-74.0060&units=imperial&appid=" + File.ReadAllText("api_key.txt"));
+            Uri uri = new Uri($"https://api.openweathermap.org/data/2.5/weather?lat={latitude}&lon={longitude}&units=imperial&appid=" + File.ReadAllText("api_key.txt"));
             try
             {
                 HttpResponseMessage response = await _client.GetAsync(uri);
